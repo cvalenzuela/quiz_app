@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2 This is the about page
+  p Using the layout template
+
+  ul
+    each name in namelist
+      li=name
+
+  if is_meeting_on
+    h1 The meeting is ON
+  else
+    h1 The meeting is OFF
