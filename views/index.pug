@@ -3,6 +3,27 @@ extends layout
 block content
   h4 This is the homepage
   p using tempaltes!
-  h1=myname
+  a(id='socket' href='#') Send a Socket Messsage
 
-  form()
+  form(id='chat')
+    input(type='text' id='chat-message' placeholder='Enter your message')
+    input(type='submit' value='Send Message')
+
+  br
+  br
+  br
+
+
+  form(method='POST', action='/newuser' id='user')
+    input(type='texto' id='username' name='username' placeholder='Enter name here')
+    input(type='submit' name='submit' value='Save User' )
+
+  br
+  br
+  br
+
+  form(id='gif')
+    input(type='text' placeholder='Enter gif' id='gif-value')
+    input(type='submit' value='Get Gif')
+
+  ul(id='chat-messages')
